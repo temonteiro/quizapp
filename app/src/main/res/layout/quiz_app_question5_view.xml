@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="350px"
+        android:id="@+id/imagem_pergunta5"
+        android:src="@drawable/enigma"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pergunta5"
+        android:text="@string/pergunta5"
+        android:background="@color/background_floating_material_dark"
+        android:textColor="#fff"
+        android:layout_below="@id/imagem_pergunta5"
+        android:layout_marginTop="15px"
+        android:textSize="40px"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pergunta5"
+        android:layout_marginTop="35px"
+        android:id="@+id/pergunta5_resposta1"
+        android:text="Tear de Jacquard"
+        android:background="@color/button_material_light"
+        android:textColor="@color/background_floating_material_dark"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pergunta5_resposta1"
+        android:layout_marginTop="15px"
+        android:id="@+id/pergunta5_resposta2"
+        android:text="Enigma"
+        android:background="@color/button_material_light"
+        android:textColor="@color/background_floating_material_dark"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pergunta5_resposta2"
+        android:layout_marginTop="15px"
+        android:id="@+id/pergunta5_resposta3"
+        android:text="Máquina Analítica"
+        android:background="@color/button_material_light"
+        android:textColor="@color/background_floating_material_dark"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pergunta5_resposta3"
+        android:layout_marginTop="15px"
+        android:id="@+id/pergunta5_resposta4"
+        android:text=" Máquina de Turing"
+        android:background="@color/button_material_light"
+        android:textColor="@color/background_floating_material_dark"/>
+
+</LinearLayout>

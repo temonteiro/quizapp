@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.com.quizapp.TelaInicial">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bem_vindo"
+        android:id="@+id/bem_vindo"
+        android:textSize="50dp"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/nomeDoUsuario"
+        android:hint="@string/nomeUsuario"
+        android:layout_below="@+id/bem_vindo"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="71dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/proximo"
+        android:background="@color/accent_material_light"
+        android:id="@+id/proximoTelaInicial"
+        android:layout_below="@+id/nomeDoUsuario"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="54dp" />
+</RelativeLayout>

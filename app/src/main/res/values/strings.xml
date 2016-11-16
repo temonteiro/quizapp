@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">QuizApp</string>
+    <string name="bem_vindo">Bem vindo ao QuizApp!</string>
+    <string name="nomeUsuario">Informe o seu nome</string>
+    <string name="proximo">Iniciar</string>
+    <string name="resultado">Resultado de </string>
+    <string name="acertos">Acertou </string>
+    <string name="acertos2">perguntas de um total de 5. </string>
+    <string name="pergunta1">Quem criou o computador?</string>
+    <string name="pergunta2">Quem foi o(a) primeiro(a) programador(a) da história?</string>
+    <string name="pergunta3">Qual a linguagem de programação mais usada em 2016?</string>
+    <string name="pergunta4">Qual a linguagem de programação mais antiga?</string>
+    <string name="pergunta5">Qual o nome da máquina que Alan Turing decodificou durante a 2ª Guerra Mundia?</string>
+</resources>
