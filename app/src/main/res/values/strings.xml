@@ -11,4 +11,9 @@
     <string name="pergunta3">Qual a linguagem de programação mais usada em 2016?</string>
     <string name="pergunta4">Qual a linguagem de programação mais antiga?</string>
     <string name="pergunta5">Qual o nome da máquina que Alan Turing decodificou durante a 2ª Guerra Mundia?</string>
+    <string name="iniciarJogo">Iniciar Jogo</string>
+    <string name="adicionar_pergunta">Adicionar Pergunta</string>
+    <string name="informarPergunta">Informe a pergunta</string>
+    <string name="infomeResposta">Informe a resposta</string>
+    <string name="adicionar">Adicionar</string>
 </resources>

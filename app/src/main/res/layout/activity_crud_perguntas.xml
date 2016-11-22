@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/crud_pergunta1"
+        android:hint="@string/informarPergunta"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/crud_pergunta1"
+        android:id="@+id/crud_resposta1"
+        android:hint="@string/infomeResposta"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/crud_resposta1"
+        android:id="@+id/crud_resposta2"
+        android:hint="@string/infomeResposta"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/crud_resposta2"
+        android:id="@+id/crud_resposta3"
+        android:hint="@string/infomeResposta"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/crud_resposta3"
+        android:id="@+id/crud_resposta4"
+        android:hint="@string/infomeResposta"/>
+
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/crud_resposta4">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btAdicionar"
+            android:text="@string/adicionar"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

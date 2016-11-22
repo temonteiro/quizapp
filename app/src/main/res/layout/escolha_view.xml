@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bem_vindo"
+        android:id="@+id/bem_vindo"
+        android:textSize="50dp"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/iniciarJogo"
+        android:background="@color/accent_material_light"
+        android:id="@+id/iniciarJogo"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="42dp"
+        android:layout_below="@+id/bem_vindo"
+        android:layout_toStartOf="@+id/addPergunta" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/adicionar_pergunta"
+        android:background="@color/accent_material_light"
+        android:id="@+id/addPergunta"
+        android:layout_alignTop="@+id/iniciarJogo"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="50dp" />
+</RelativeLayout>
