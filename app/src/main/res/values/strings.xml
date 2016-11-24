@@ -16,4 +16,5 @@
     <string name="informarPergunta">Informe a pergunta</string>
     <string name="infomeResposta">Informe a resposta</string>
     <string name="adicionar">Adicionar</string>
+    <string name="informeRespostaCerta">Das resposta acima, qual é a resposta certa para a pergunta que você informou?</string>
 </resources>

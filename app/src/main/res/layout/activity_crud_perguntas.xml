@@ -37,6 +37,13 @@
         android:id="@+id/crud_resposta4"
         android:hint="@string/infomeResposta"/>
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/crud_resposta4"
+        android:id="@+id/resposta_certa"
+        android:hint="@string/informeRespostaCerta"/>
+
 
     <LinearLayout
         android:id="@+id/buttons"

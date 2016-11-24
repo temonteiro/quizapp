@@ -22,6 +22,7 @@ public class DBHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "quizManager";
     private static final String TABLE_NAME = "quiz_perguntas";
     private static final String TABLE_NAME2 = "quiz_respostas";
+    private static final String TABLE_NAME3 = "quiz_resposta_certa";
 
     //CAMPOS DA TABELA PERGUNTAS
     private static final String KEY_ID_QUESTION = "id_question";
@@ -30,6 +31,9 @@ public class DBHelper extends SQLiteOpenHelper {
     //CAMPOS DA TABELA RESPOSTAS
     private static final String KEY_ID_ANSWER = "id_answer";
     private static final String KEY_ANSWER = "answer";
+
+    //CAMPOS DA TABELA RESPOSTAS CERTA
+    private static final String KEY_ID_RESPOSTA_CERTA = "id_resposta_certa";
 
     public DBHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -47,13 +51,18 @@ public class DBHelper extends SQLiteOpenHelper {
                 + KEY_ID_QUESTION + " integer"
                 + KEY_ANSWER + " text)";
         db.execSQL(CREATE_ANSWER_TABLE);
+
+        String CREATE_ANSWER_CORRETA_TABLE = "CREATE TABLE "+TABLE_NAME3+"("
+                + KEY_ID_RESPOSTA_CERTA + " integer primary key autoincrement,"
+                + KEY_ID_ANSWER + " integer)";
+        db.execSQL(CREATE_ANSWER_CORRETA_TABLE);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
         db.execSQL("DROP TABLE IF EXISTS "+ TABLE_NAME);
         db.execSQL("DROP TABLE IF EXISTS "+ TABLE_NAME2);
-
+        db.execSQL("DROP TABLE IF EXISTS "+ TABLE_NAME3);
         onCreate(db);
     }
 
@@ -89,9 +98,13 @@ public class DBHelper extends SQLiteOpenHelper {
         Cursor cursor = db.query(TABLE_NAME, new String[] {KEY_ID_QUESTION}, KEY_QUESTION + "=?",
                 new String[]{pergunta}, null, null, null);
 
-        if(cursor != null)
-            cursor.moveToFirst();
-        idQuestion = Integer.parseInt(cursor.getString(0));
+        if (cursor.moveToFirst()) {
+            do {
+                idQuestion = cursor.getColumnIndex("id_question");
+                // do what ever you want here
+            } while (cursor.moveToNext());
+        }
+
         cursor.close();
 
         return idQuestion;
@@ -113,14 +126,13 @@ public class DBHelper extends SQLiteOpenHelper {
             Cursor cursor = db.query(TABLE_NAME2, new String[] {KEY_ANSWER}, KEY_ID_QUESTION + "=?",
                     new String[]{String.valueOf(pergunta.getIdQuestion())}, null, null, null);
 
-            if(cursor != null)
-                cursor.moveToFirst();
-
-            for (int j = 1; j < cursor.getCount(); j++){
-                String resposta = cursor.getString(j);
-                respostasTudo.add(resposta);
+            if (cursor.moveToFirst()) {
+                do {
+                    String resposta = cursor.getString(cursor.getColumnIndex("answer"));
+                    respostasTudo.add(resposta);
+                    // do what ever you want here
+                } while (cursor.moveToNext());
             }
-
             perguntasRespostasList.add(perguntasRespostas);
             cursor.close();
 
@@ -137,17 +149,17 @@ public class DBHelper extends SQLiteOpenHelper {
         Cursor cursor = db.query(TABLE_NAME, new String[] {KEY_ID_QUESTION}, null,
                 null, null, null, null);
 
-        if(cursor != null)
-            cursor.moveToFirst();
-        Log.v("Cursor", cursor.toString());
+        if (cursor.moveToFirst()){
+            do{
+                Pergunta pergunta = new Pergunta();
+                pergunta.setIdQuestion(cursor.getColumnIndex("id_question"));
+                pergunta.setQuestion(cursor.getString(cursor.getColumnIndex("question")));
 
-        for (int i = 1; i < cursor.getCount(); i++){
-            Pergunta pergunta = new Pergunta();
-            pergunta.setIdQuestion(Integer.parseInt(cursor.getString(i)));
-            pergunta.setQuestion(cursor.getString(i));
-
-            perguntaList.add(pergunta);
+                perguntaList.add(pergunta);
+                // do what ever you want here
+            }while(cursor.moveToNext());
         }
+
         cursor.close();
 
         return perguntaList;

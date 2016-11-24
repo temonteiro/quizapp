@@ -9,6 +9,7 @@ public class PerguntasRespostas {
 
     private String pergunta;
     private List<String> respostas;
+    private String respostaCerta;
 
     public String getPergunta() {
         return pergunta;
@@ -24,5 +25,13 @@ public class PerguntasRespostas {
 
     public void setPergunta(String pergunta) {
         this.pergunta = pergunta;
+    }
+
+    public String getRespostaCerta() {
+        return respostaCerta;
+    }
+
+    public void setRespostaCerta(String respostaCerta) {
+        this.respostaCerta = respostaCerta;
     }
 }
