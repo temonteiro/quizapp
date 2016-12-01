@@ -16,6 +16,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".TelaInicial"></activity>
+        <activity android:name=".CadastrarPerguntaActivity"></activity>
         <activity android:name=".QuizActivity"></activity>
         <activity android:name=".QuizAppQuestion2Activity"></activity>
         <activity android:name=".QuizAppQuestion3Activity"></activity>

@@ -7,42 +7,112 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/crud_pergunta1"
-        android:hint="@string/informarPergunta"/>
+        android:hint="@string/informePergunta"/>
 
-    <EditText
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
         android:layout_below="@id/crud_pergunta1"
-        android:id="@+id/crud_resposta1"
-        android:hint="@string/infomeResposta"/>
+        android:id="@+id/selecioneRespostaCerta"
+        android:paddingTop="30px">
+        <TextView
+            android:layout_width="250px"
+            android:layout_height="wrap_content"
+            android:textSize="35px"
+            android:text="Selecione a resposta correta"/>
 
-    <EditText
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="35px"
+            android:text="Informe as opções de resposta para a pergunta"/>
+    </LinearLayout>
+
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/crud_resposta1"
-        android:id="@+id/crud_resposta2"
-        android:hint="@string/infomeResposta"/>
+        android:orientation="horizontal"
+        android:layout_below="@id/selecioneRespostaCerta"
+        android:id="@+id/layout_resposta1">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="175px"
+            android:id="@+id/check_resposta1" />
 
-    <EditText
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/crud_resposta1"
+            android:hint="@string/infomeResposta"/>
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/crud_resposta2"
-        android:id="@+id/crud_resposta3"
-        android:hint="@string/infomeResposta"/>
+        android:orientation="horizontal"
+        android:id="@+id/layout_resposta2"
+        android:layout_below="@id/layout_resposta1">
 
-    <EditText
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="175px"
+            android:id="@+id/check_resposta2" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/crud_resposta2"
+            android:hint="@string/infomeResposta"/>
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/crud_resposta3"
-        android:id="@+id/crud_resposta4"
-        android:hint="@string/infomeResposta"/>
+        android:orientation="horizontal"
+        android:layout_below="@id/layout_resposta2"
+        android:id="@+id/layout_resposta3">
 
-    <EditText
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="175px"
+            android:id="@+id/check_resposta3" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/crud_resposta3"
+            android:hint="@string/infomeResposta"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/crud_resposta4"
-        android:id="@+id/resposta_certa"
-        android:hint="@string/informeRespostaCerta"/>
+        android:orientation="horizontal"
+        android:layout_below="@id/layout_resposta3"
+        android:id="@+id/layout_resposta4">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="175px"
+            android:id="@+id/check_resposta4" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/crud_resposta4"
+            android:hint="@string/infomeResposta"/>
+
+    </LinearLayout>
 
 
     <LinearLayout
@@ -50,13 +120,20 @@
         android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/crud_resposta4">
+        android:layout_below="@id/layout_resposta4">
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btAdicionar"
             android:text="@string/adicionar"/>
+        <!--Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btRemover"
+            android:text="@string/remover"/-->
     </LinearLayout>
+
+
 
 
 </RelativeLayout>

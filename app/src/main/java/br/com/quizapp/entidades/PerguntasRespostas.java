@@ -8,30 +8,30 @@ import java.util.List;
 public class PerguntasRespostas {
 
     private String pergunta;
-    private List<String> respostas;
-    private String respostaCerta;
+    private List<String> opcoes;
+    private List<Boolean> respostas;
 
     public String getPergunta() {
         return pergunta;
     }
 
-    public List<String> getRespostas() {
-        return respostas;
+    public List<String> getOpcoes() {
+        return opcoes;
     }
 
-    public void setRespostas(List<String> respostas) {
-        this.respostas = respostas;
+    public void setOpcoes(List<String> opcoes) {
+        this.opcoes = opcoes;
     }
 
     public void setPergunta(String pergunta) {
         this.pergunta = pergunta;
     }
 
-    public String getRespostaCerta() {
-        return respostaCerta;
+    public List<Boolean> getRespostas() {
+        return respostas;
     }
 
-    public void setRespostaCerta(String respostaCerta) {
-        this.respostaCerta = respostaCerta;
+    public void setRespostas(List<Boolean> respostas) {
+        this.respostas = respostas;
     }
 }

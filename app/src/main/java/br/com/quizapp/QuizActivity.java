@@ -5,9 +5,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import java.util.List;
+
+import br.com.quizapp.db.DBHelper;
+import br.com.quizapp.entidades.PerguntasRespostas;
 
 /**
  * Created by Thalita Monteiro on 15/11/2016.
@@ -30,6 +36,10 @@ public class QuizActivity extends AppCompatActivity {
             resposta4 = (Button) findViewById(R.id.resposta4);
 
             final String nomeDoUsuario = getIntent().getStringExtra("nomeUsuario");
+
+            final DBHelper dbHelper = new DBHelper(this);
+            List<PerguntasRespostas> todasPerguntasRespostasDB = dbHelper.getAllPerguntasRespostas();
+            Log.i("Array respostas", todasPerguntasRespostasDB.toString());
 
             resposta1.setOnClickListener(
                     new View.OnClickListener() {

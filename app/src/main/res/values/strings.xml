@@ -13,7 +13,7 @@
     <string name="pergunta5">Qual o nome da máquina que Alan Turing decodificou durante a 2ª Guerra Mundia?</string>
     <string name="iniciarJogo">Iniciar Jogo</string>
     <string name="adicionar_pergunta">Adicionar Pergunta</string>
-    <string name="informarPergunta">Informe a pergunta</string>
+    <string name="informePergunta">Informe a pergunta</string>
     <string name="infomeResposta">Informe a resposta</string>
     <string name="adicionar">Adicionar</string>
     <string name="informeRespostaCerta">Das resposta acima, qual é a resposta certa para a pergunta que você informou?</string>
