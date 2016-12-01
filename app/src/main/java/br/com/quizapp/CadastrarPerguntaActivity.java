@@ -75,7 +75,7 @@ public class CadastrarPerguntaActivity extends AppCompatActivity {
 
                 Toast.makeText(getApplicationContext(), "Pergunta cadastrada com sucesso", Toast.LENGTH_SHORT).show();
 
-                Intent voltarTelaInicial = new Intent(CadastrarPerguntaActivity.this, TelaInicial.class);
+                Intent voltarTelaInicial = new Intent(CadastrarPerguntaActivity.this, EscolhaActivity.class);
                 startActivity(voltarTelaInicial);
 
             }
