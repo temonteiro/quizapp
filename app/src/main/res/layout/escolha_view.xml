@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:text="@string/verListaPerguntas"
         android:background="@color/accent_material_light"
-        android:id="@+id/listaPerguntas"
+        android:id="@+id/listarPerguntas"
         android:layout_below="@+id/iniciarJogo"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="73dp" />

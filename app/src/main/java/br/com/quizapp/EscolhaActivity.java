@@ -12,7 +12,7 @@ import android.widget.Button;
  */
 public class EscolhaActivity extends AppCompatActivity {
 
-    Button addPergunta, iniciarJogo;
+    Button addPergunta, iniciarJogo, listarPerguntas;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +20,7 @@ public class EscolhaActivity extends AppCompatActivity {
 
         addPergunta = (Button) findViewById(R.id.addPergunta);
         iniciarJogo = (Button) findViewById(R.id.iniciarJogo);
+        listarPerguntas = (Button) findViewById(R.id.listarPerguntas);
 
         addPergunta.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,5 +37,7 @@ public class EscolhaActivity extends AppCompatActivity {
                 startActivity(iniciarJogo);
             }
         });
+
+
     }
 }
